@@ -1,0 +1,41 @@
+body{
+    height: auto;
+    background-image: url(../img/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 48px;
+    gap: 96px;
+}
+.card{
+    width: 260px;
+    height: 340px;
+    border-radius: 10px;
+    border: 4px solid #000000;
+    background-color: #FF7226;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Itim';
+    text-align: center;
+    cursor: pointer;
+}
+.personagem{
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+}
+/* MOBILE */
+@media (max-width:640px){
+    main{
+        justify-content: center;
+        gap: 64px;
+    }
+}
