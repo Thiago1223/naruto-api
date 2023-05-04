@@ -5,7 +5,7 @@ class footer extends HTMLElement {
         super()
         this.shadow = this.attachShadow({ mode: 'open' })  
         this.imagem_logo = null   
-        this.text_copyright = 'Copyright © 2023 | Thiago Freitas'
+        this.text_copyright = 'Digite o autor'
     }
 
     static get observedAttributes(){
@@ -55,7 +55,7 @@ component(){
     
     const imgLogo = document.createElement('img')
     imgLogo.classList.add('rodape')
-    imgLogo.src = '../img/footer.png'
+    imgLogo.src = this.imagem_logo
 
     const textCopyright = document.createElement('p')
     textCopyright.classList.add('copyright')

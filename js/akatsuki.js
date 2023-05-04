@@ -1,8 +1,8 @@
 'use strict'
 
-import { getAllCharacters } from "./api.js"
+import { getCharactersAkatsuki } from "./api.js"
 
-const personagens = await getAllCharacters()
+const personagens = await getCharactersAkatsuki()
 
 const criarCard = (personagem) => {
 
@@ -11,7 +11,7 @@ const criarCard = (personagem) => {
 
     const imgPersonagem = document.createElement('img')
     imgPersonagem.classList.add('personagem')
-    imgPersonagem.src = personagem.images[0]
+    imgPersonagem.src = personagem.images
 
     const textPersonagem = document.createElement('p')
     textPersonagem.textContent = personagem.name

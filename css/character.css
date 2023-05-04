@@ -4,11 +4,11 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-main{
+.container{
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    padding: 48px;
+    padding: 100px;
     gap: 96px;
 }
 .card{
@@ -34,7 +34,7 @@ main{
 }
 /* MOBILE */
 @media (max-width:640px){
-    main{
+    .container{
         justify-content: center;
         gap: 64px;
     }

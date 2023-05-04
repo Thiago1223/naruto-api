@@ -1,11 +1,11 @@
 'use strict'
 
-import { getAllCharacters } from "./api.js"
+import { getCharactersKara } from "./api.js"
 
-const personagens = await getAllCharacters()
+const personagens = await getCharactersKara()
 
 const criarCard = (personagem) => {
-
+    
     const card = document.createElement('div')
     card.classList.add('card')
 
