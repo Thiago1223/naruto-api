@@ -1,11 +1,11 @@
 'use strict'
 
 export const getAllCharacters = async () => {
-    const url = `https://naruto-api.fly.dev/api/v1/characters`
+    const url = `https://api.narutodb.xyz/character?page=1&limit=100`
     const response = await fetch(url)
     const data = await response.json()
     
-    return data
+    return data.characters
 }
 
 export const getCharactersKara = async () => {
@@ -14,6 +14,7 @@ export const getCharactersKara = async () => {
     const data = await response.json()
     
     return data.kara
+
 }
 
 export const getCharactersAkatsuki = async () => {

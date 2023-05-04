@@ -11,8 +11,8 @@ const criarCard = (personagem) => {
 
     const imgPersonagem = document.createElement('img')
     imgPersonagem.classList.add('personagem')
-    imgPersonagem.src = personagem.images[0]
-
+    imgPersonagem.src = personagem.images[0]?.split('png')[0] + 'png'
+    
     const textPersonagem = document.createElement('p')
     textPersonagem.textContent = personagem.name
 
@@ -22,11 +22,9 @@ const criarCard = (personagem) => {
 
 }
 
-const carregarCard = () => {
+export const carregarCardKara = () => {
     const container = document.getElementById('container')
     const cards = personagens.map(criarCard)
 
     container.replaceChildren(...cards)
 }
-
-carregarCard()
