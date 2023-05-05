@@ -28,22 +28,22 @@ const criarCard = () => {
     containerInfo.classList.add('container-info')
 
     const nameInfo = document.createElement('p')
-    nameInfo.textContent = nameCharacter
+    nameInfo.textContent = `Name: ${nameCharacter}`
 
     const birthDateInfo = document.createElement('p')
-    birthDateInfo.textContent = birthDateCharacter
+    birthDateInfo.textContent = `Birthdate: ${birthDateCharacter}`
 
     const occupationInfo = document.createElement('p')
-    occupationInfo.textContent = occupationCharacter
+    occupationInfo.textContent = `Occupation: ${occupationCharacter}`
 
     const sexInfo = document.createElement('p')
-    sexInfo.textContent = sexCharacter
+    sexInfo.textContent = `Sex: ${sexCharacter}`
 
     const statusInfo = document.createElement('p')
-    statusInfo.textContent = statusCharacter
+    statusInfo.textContent = `Status: ${statusCharacter}`
 
     const affiliationInfo = document.createElement('p')
-    affiliationInfo.textContent = affiliationCharacter
+    affiliationInfo.textContent = `Affiliation: ${affiliationCharacter}`
 
     containerMain.append(imgPersonagem, containerInfo)
     containerInfo.append(nameInfo, birthDateInfo, occupationInfo, sexInfo, statusInfo, affiliationInfo)
