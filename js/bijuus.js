@@ -6,8 +6,9 @@ const personagens = await getCharactersBijuus()
 
 const criarCard = (personagem) => {
 
-    const card = document.createElement('div')
+    const card = document.createElement('a')
     card.classList.add('card')
+    card.setAttribute('href', '../pages/informacao.html')
 
     const imgPersonagem = document.createElement('img')
     imgPersonagem.classList.add('personagem')

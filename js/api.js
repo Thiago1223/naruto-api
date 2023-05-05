@@ -32,3 +32,11 @@ export const getCharactersBijuus = async () => {
     
     return data.tailedBeasts
 }
+
+export const getCharactersById = async (id) => {
+    const url = `https://api.narutodb.xyz/character/${id}`
+    const response = await fetch(url)
+    const data = await response.json()
+    
+    return data
+}
