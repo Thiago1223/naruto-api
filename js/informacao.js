@@ -1,61 +1,61 @@
-// 'use strict'
+'use strict'
 
-// import { getCharactersById } from "./api.js"
+import { getCharactersById } from "./api.js"
 
-// let idCharacter = localStorage.getItem('characterId')
-// let imageCharacter = localStorage.getItem('characterImage')
-// let nameCharacter = localStorage.getItem('characterName')
-// let birthDateCharacter = localStorage.getItem('characterBirthDate')
-// let occupationCharacter = localStorage.getItem('characterOccupation')
-// let sexCharacter = localStorage.getItem('characterSex')
-// let statusCharacter = localStorage.getItem('characterStatus')
-// let affiliationCharacter = localStorage.getItem('characterAffiliation')
+let idCharacter = localStorage.getItem('characterId')
+let imageCharacter = localStorage.getItem('characterImage')
+let nameCharacter = localStorage.getItem('characterName')
+let birthDateCharacter = localStorage.getItem('characterBirthDate')
+let occupationCharacter = localStorage.getItem('characterOccupation')
+let sexCharacter = localStorage.getItem('characterSex')
+let statusCharacter = localStorage.getItem('characterStatus')
+let affiliationCharacter = localStorage.getItem('characterAffiliation')
 
-// const personagens = await getCharactersById(idCharacter)
-// console.log(personagens)
+const personagens = await getCharactersById(idCharacter)
+let newArray = []
+newArray.push(personagens)
 
-// const criarCard = () => {
+const criarCard = () => {
 
-//     const containerMain = document.createElement('div')
-//     containerMain.classList.add('container-main')
+    const containerMain = document.createElement('div')
+    containerMain.classList.add('container-main')
 
-//     const imgPersonagem = document.createElement('img')
-//     imgPersonagem.classList.add('personagem')
-//     imgPersonagem.src = imageCharacter
+    const imgPersonagem = document.createElement('img')
+    imgPersonagem.classList.add('personagem')
+    imgPersonagem.src = imageCharacter
 
-//     const containerInfo = document.createElement('div')
-//     containerInfo.classList.add('container-info')
+    const containerInfo = document.createElement('div')
+    containerInfo.classList.add('container-info')
 
-//     const nameInfo = document.createElement('p')
-//     nameInfo.textContent = nameCharacter
+    const nameInfo = document.createElement('p')
+    nameInfo.textContent = nameCharacter
 
-//     const birthDateInfo = document.createElement('p')
-//     birthDateInfo.textContent = birthDateCharacter
+    const birthDateInfo = document.createElement('p')
+    birthDateInfo.textContent = birthDateCharacter
 
-//     const occupationInfo = document.createElement('p')
-//     occupationInfo.textContent = occupationCharacter
+    const occupationInfo = document.createElement('p')
+    occupationInfo.textContent = occupationCharacter
 
-//     const sexInfo = document.createElement('p')
-//     sexInfo.textContent = sexCharacter
+    const sexInfo = document.createElement('p')
+    sexInfo.textContent = sexCharacter
 
-//     const statusInfo = document.createElement('p')
-//     statusInfo.textContent = statusCharacter
+    const statusInfo = document.createElement('p')
+    statusInfo.textContent = statusCharacter
 
-//     const affiliationInfo = document.createElement('p')
-//     affiliationInfo.textContent = affiliationCharacter
+    const affiliationInfo = document.createElement('p')
+    affiliationInfo.textContent = affiliationCharacter
 
-//     containerMain.append(imgPersonagem, containerInfo)
-//     containerInfo.append(nameInfo, birthDateInfo, occupationInfo, sexInfo, statusInfo, affiliationInfo)
+    containerMain.append(imgPersonagem, containerInfo)
+    containerInfo.append(nameInfo, birthDateInfo, occupationInfo, sexInfo, statusInfo, affiliationInfo)
 
-//     return containerMain
-// }
+    return containerMain
+}
 
-// const carregarCard = () => {
-//     const container = document.getElementById('container-main')
-//     const cards = personagens.map(criarCard)
+const carregarCard = () => {
+    const container = document.getElementById('container-main')
+    const cards = newArray.map(criarCard)
 
+    container.replaceChildren(...cards)
+}
 
-//     container.replaceChildren(...cards)
-// }
-
-// carregarCard()
+carregarCard()
