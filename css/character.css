@@ -37,5 +37,6 @@ body{
     .container{
         justify-content: center;
         gap: 64px;
+        padding: 32px;
     }
 }

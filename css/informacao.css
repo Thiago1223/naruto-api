@@ -38,14 +38,11 @@ header i{
 
 /* MOBILE */
 @media (max-width:640px){
-    .container-main{
-        padding: 32px;
-    }
     body{
         height: auto;
     }
     .personagem{
         width: 320px;
-        height: 420px;
+        height: 320px;
     }
 }
