@@ -12,6 +12,10 @@ header{
 }
 header i{
     font-size: 48px;
+    transition: .2s;
+}
+header i:hover{
+    transform: scale(1.1);
 }
 .container-main{
     display: flex;
