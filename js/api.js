@@ -1,7 +1,7 @@
 'use strict'
 
 export const getAllCharacters = async () => {
-    const url = `https://api.narutodb.xyz/character?page=1&limit=100`
+    const url = `https://api.narutodb.xyz/character?page=1&limit=50`
     const response = await fetch(url)
     const data = await response.json()
     

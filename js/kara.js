@@ -23,7 +23,12 @@ const criarCard = (personagem) => {
 
     const imgPersonagem = document.createElement('img')
     imgPersonagem.classList.add('personagem')
-    imgPersonagem.src = personagem.images[0]?.split('png')[0] + 'png'
+
+    if (personagem.images == '') {
+        imgPersonagem.src = '../img/no-image.png'
+    } else {
+        imgPersonagem.src = personagem.images[0]?.split('png')[0] + 'png'
+    }
     
     const textPersonagem = document.createElement('p')
     textPersonagem.textContent = personagem.name
